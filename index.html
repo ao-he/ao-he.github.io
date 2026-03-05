@@ -1,173 +1,246 @@
 <!doctype html>
 <html lang="zh">
-
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ao He | Personal Site</title>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<title>Ao He | Personal Site</title>
+  <style>
+    :root{
+      --bg:#fafafa;
+      --card:#ffffff;
+      --border:#eeeeee;
+      --muted:#666666;
+      --link:#0b57d0;
+      --shadow:0 6px 20px rgba(0,0,0,0.05);
+      --radius:18px;
+    }
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+      max-width: 920px;
+      margin: 60px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      background: var(--bg);
+      color:#111;
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+    }
+    h1{ margin:0; font-size: 36px; }
+    .meta{ color: var(--muted); margin-top: 6px; margin-bottom: 18px; }
+    a{ color: var(--link); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    .links{
+      margin-top: 10px;
+      font-size: 15px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+    }
+    .links a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius: 12px;
+      border:1px solid #f1f1f1;
+      background:#fff;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .links a:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      text-decoration:none;
+    }
+    .section{ margin-top: 34px; }
+    .section h2{ margin: 0 0 12px; }
 
-<style>
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:14px;
+      margin-top: 14px;
+    }
+    .item{
+      border:1px solid #f0f0f0;
+      border-radius:14px;
+      padding:16px;
+      background:#fff;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .item:hover{
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+    .item p{ margin:8px 0 0; color:#333; }
+    .muted{ color: var(--muted); }
+    .tagline{ margin: 0 0 6px; }
+    ul.clean{
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+    ul.clean li{ margin: 6px 0; }
 
-body{
-font-family: system-ui,-apple-system,Segoe UI,Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
-max-width:900px;
-margin:60px auto;
-padding:0 20px;
-line-height:1.7;
-background:#fafafa;
-}
+    .pub{
+      border:1px solid #f0f0f0;
+      border-radius:14px;
+      padding:14px 16px;
+      background:#fff;
+      margin:12px 0;
+    }
+    .pub-title{ font-weight: 700; margin:0; }
+    .pub-meta{ margin:6px 0 0; color:#444; }
+    .pub-links{ margin-top:8px; display:flex; gap:12px; flex-wrap:wrap; }
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:6px 10px;
+      border:1px solid #f1f1f1;
+      border-radius:999px;
+      background:#fff;
+      font-size: 14px;
+    }
 
-.card{
-background:white;
-border:1px solid #eee;
-border-radius:18px;
-padding:30px;
-}
-
-h1{
-margin:0;
-font-size:36px;
-}
-
-.meta{
-color:#666;
-margin-top:6px;
-margin-bottom:18px;
-}
-
-a{
-color:#0b57d0;
-text-decoration:none;
-}
-
-a:hover{
-text-decoration:underline;
-}
-
-.links{
-margin-top:12px;
-font-size:15px;
-}
-
-.links a{
-margin:0 4px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:14px;
-margin-top:14px;
-}
-
-.item{
-border:1px solid #f0f0f0;
-border-radius:14px;
-padding:16px;
-transition:all 0.2s ease;
-}
-
-.item:hover{
-transform:translateY(-3px);
-box-shadow:0 6px 20px rgba(0,0,0,0.05);
-}
-
-h2{
-margin-top:30px;
-}
-
-footer{
-color:#777;
-margin-top:24px;
-font-size:14px;
-}
-
-</style>
-
+    footer{
+      color:#777;
+      margin-top: 26px;
+      font-size: 14px;
+    }
+    code{ background:#f6f6f6; padding:2px 6px; border-radius:8px; }
+  </style>
 </head>
 
 <body>
+  <div class="card">
 
-<div class="card">
+    <h1>Ao He</h1>
+    <div class="meta">PhD Student · Construction / ML / Sensing</div>
 
-<h1>Ao He</h1>
+    <p class="tagline">
+      I work at the intersection of smart infrastructure, computer vision, and data-driven transportation systems.
+      My current focus is on building interpretable, scene-aware methods to understand cyclist behavior from fixed-camera imagery.
+    </p>
 
-<div class="meta">
-PhD Student · Construction / ML / Sensing
-</div>
+    <div class="links">
+      <a href="mailto:aohe@ufl.edu"><i class="fa-solid fa-envelope"></i> Email</a>
+      <a href="https://scholar.google.com/citations?user=mpcGXTgAAAAJ&hl=en" target="_blank" rel="noreferrer">
+        <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+      </a>
+      <a href="https://www.linkedin.com/in/ao-he" target="_blank" rel="noreferrer">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/" target="_blank" rel="noreferrer">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+    </div>
 
-<p>
-一句话简介（先写占位）：我关注 <strong>smart infrastructure</strong>、<strong>computer vision</strong> 和 <strong>data-driven transportation systems</strong>。
-</p>
+    <div class="section" id="education">
+      <h2>Education</h2>
+      <div class="grid">
+        <div class="item">
+          <b>University of Florida</b>
+          <p class="muted">PhD in Construction Management · 2025 – Present</p>
+          <p>Research on smart infrastructure and scene-aware urban mobility analytics.</p>
+        </div>
+        <div class="item">
+          <b>Georgia Institute of Technology</b>
+          <p class="muted">M.S. in Civil Engineering · 2024</p>
+          <p>Structural analysis / computational methods background.</p>
+        </div>
+        <div class="item">
+          <b>Wuhan University of Technology</b>
+          <p class="muted">B.S. in Civil Engineering · 2022</p>
+          <p>Structural safety design foundation.</p>
+        </div>
+      </div>
+    </div>
 
-<div class="links">
+    <div class="section" id="research">
+      <h2>Research Interests</h2>
+      <ul class="clean">
+        <li>Scene-aware behavior inference for cyclists and micromobility users</li>
+        <li>Lightweight computer vision pipelines for fixed cameras (detection, tracking, rule-based reasoning)</li>
+        <li>Exposure / safety-relevant behavioral metrics from sparse, time-stamped imagery</li>
+        <li>Smart infrastructure sensing and data-driven decision support</li>
+      </ul>
+    </div>
 
-<a href="mailto:aohe@ufl.edu">
-<i class="fa-solid fa-envelope"></i> aohe@ufl.edu
-</a>
+    <div class="section" id="publications">
+      <h2>Publications</h2>
 
-|
+      <!-- Replace these with your real papers. Keep “in preparation” if needed. -->
+      <div class="pub">
+        <p class="pub-title">CycleSense: Scene-Aware Inference of Urban Cycling Behavior from Fixed Cameras</p>
+        <p class="pub-meta">
+          <span class="muted">Ao He</span> · Vivian Wong · Ricardo Eiris · (others)<br>
+          <span class="muted">Manuscript in preparation / under review</span>
+        </p>
+        <div class="pub-links">
+          <span class="pill"><i class="fa-solid fa-file-lines"></i> Paper (coming soon)</span>
+          <span class="pill"><i class="fa-brands fa-github"></i> Code (coming soon)</span>
+          <span class="pill"><i class="fa-solid fa-chart-line"></i> Dataset notes (coming soon)</span>
+        </div>
+      </div>
 
-<a href="https://scholar.google.com/citations?user=mpcGXTgAAAAJ&hl=en" target="_blank">
-<i class="fa-solid fa-graduation-cap"></i> Google Scholar
-</a>
+      <div class="pub">
+        <p class="pub-title">[Add your next paper title here]</p>
+        <p class="pub-meta">
+          <span class="muted">Authors</span><br>
+          <span class="muted">Venue / Year</span>
+        </p>
+        <div class="pub-links">
+          <a class="pill" href="#" onclick="return false;"><i class="fa-solid fa-link"></i> Link</a>
+        </div>
+      </div>
 
-|
+      <p class="muted" style="margin-top:10px;">
+        Tip: once you have DOI/arXiv links, replace the “coming soon” pills with real <code>&lt;a href="..."&gt;</code> links.
+      </p>
+    </div>
 
-<a href="https://www.linkedin.com/in/ao-he" target="_blank">
-<i class="fa-brands fa-linkedin"></i> LinkedIn
-</a>
+    <div class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="item">
+          <b>CycleSense</b>
+          <p>
+            A lightweight, interpretable framework for cyclist behavior inference using fixed-camera, time-stamped images.
+            Uses scene ROIs (sidewalk/bikelane/roadway/crosswalk) + rule-based event reasoning to produce behavior metrics.
+          </p>
+        </div>
+        <div class="item">
+          <b>Smart Infrastructure Analytics</b>
+          <p>
+            Methods for turning heterogeneous sensing signals into actionable insights for operations, safety, and maintenance.
+          </p>
+        </div>
+      </div>
+    </div>
 
-|
+    <div class="section" id="cv">
+      <h2>CV</h2>
+      <p>
+        Download my CV:
+        <a href="./cv.pdf"><i class="fa-solid fa-download"></i> cv.pdf</a>
+        <span class="muted">(upload your file to the repo root and name it <code>cv.pdf</code>)</span>
+      </p>
+    </div>
 
-<a href="https://github.com/" target="_blank">
-<i class="fa-brands fa-github"></i> GitHub
-</a>
+    <footer>© <span id="year"></span> Ao He</footer>
 
-</div>
+  </div>
 
-<h2>Projects</h2>
-
-<div class="grid">
-
-<div class="item">
-<b>CycleSense</b>
-<p>
-Scene-aware cyclist behavior inference system based on fixed urban cameras. 
-This project aims to understand cyclist movement patterns using lightweight computer vision and spatial reasoning.
-</p>
-</div>
-
-<div class="item">
-<b>Future Project</b>
-<p>
-More research projects will be added here.
-</p>
-</div>
-
-</div>
-
-<h2>CV</h2>
-
-<p>
-You can download my CV here:
-<a href="./cv.pdf">Download CV</a>
-</p>
-
-<footer>
-© <span id="year"></span> Ao He
-</footer>
-
-</div>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear()
-</script>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear()
+  </script>
 </body>
-
 </html>
