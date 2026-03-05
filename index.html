@@ -1,63 +1,173 @@
 <!doctype html>
 <html lang="zh">
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ao He | Personal Site</title>
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
-         max-width:860px;margin:64px auto;padding:0 18px;line-height:1.65}
-    .card{border:1px solid #eee;border-radius:18px;padding:24px}
-    h1{margin:0 0 6px;font-size:34px}
-    .meta{color:#666;margin:0 0 16px}
-    a{color:#0b57d0;text-decoration:none}
-    a:hover{text-decoration:underline}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
-    .item{border:1px solid #f2f2f2;border-radius:14px;padding:14px}
-    footer{color:#777;margin-top:18px;font-size:14px}
-  </style>
-</head>
-<body>
-  <div class="card">
-    <h1>Ao He</h1>
-    <div class="meta">PhD Student · Construction / ML / Sensing</div>
 
-    <p>
-      一句话简介（先写个占位）：我关注<strong>XXX</strong>，研究<strong>XXX</strong>，目标是<strong>XXX</strong>。
-    </p>
- <p>
-  <a href="mailto:aohe@ufl.edu">
-    <i class="fa-solid fa-envelope"></i> Email
-  </a> ·
-  
-  <a href="https://scholar.google.com/citations?user=mpcGXTgAAAAJ&hl=zh-TW" target="_blank">
-    <i class="fa-brands fa-google-scholar"></i> Google Scholar
-  </a> ·
-  
-  <a href="https://www.linkedin.com/in/ao-he" target="_blank">
-    <i class="fa-brands fa-linkedin"></i> LinkedIn
-  </a>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Ao He | Personal Site</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+font-family: system-ui,-apple-system,Segoe UI,Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+max-width:900px;
+margin:60px auto;
+padding:0 20px;
+line-height:1.7;
+background:#fafafa;
+}
+
+.card{
+background:white;
+border:1px solid #eee;
+border-radius:18px;
+padding:30px;
+}
+
+h1{
+margin:0;
+font-size:36px;
+}
+
+.meta{
+color:#666;
+margin-top:6px;
+margin-bottom:18px;
+}
+
+a{
+color:#0b57d0;
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+.links{
+margin-top:12px;
+font-size:15px;
+}
+
+.links a{
+margin:0 4px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:14px;
+margin-top:14px;
+}
+
+.item{
+border:1px solid #f0f0f0;
+border-radius:14px;
+padding:16px;
+transition:all 0.2s ease;
+}
+
+.item:hover{
+transform:translateY(-3px);
+box-shadow:0 6px 20px rgba(0,0,0,0.05);
+}
+
+h2{
+margin-top:30px;
+}
+
+footer{
+color:#777;
+margin-top:24px;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Ao He</h1>
+
+<div class="meta">
+PhD Student · Construction / ML / Sensing
+</div>
+
+<p>
+一句话简介（先写占位）：我关注 <strong>smart infrastructure</strong>、<strong>computer vision</strong> 和 <strong>data-driven transportation systems</strong>。
 </p>
 
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="item">
-        <b>CycleSense</b>
-        <p>一句话说明你做了什么 + 链接（论文/代码/演示）。</p>
-      </div>
-      <div class="item">
-        <b>Project 2</b>
-        <p>一句话说明。</p>
-      </div>
-    </div>
+<div class="links">
 
-    <h2>CV</h2>
-    <p>把简历 PDF 上传到仓库后命名为 <code>cv.pdf</code>，这里就能下载：<a href="./cv.pdf">Download CV</a></p>
+<a href="mailto:aohe@ufl.edu">
+<i class="fa-solid fa-envelope"></i> Email
+</a>
 
-    <footer>© <span id="y"></span> Ao He</footer>
-  </div>
+|
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear()</script>
+<a href="https://scholar.google.com/citations?user=mpcGXTgAAAAJ&hl=en" target="_blank">
+<i class="fa-solid fa-graduation-cap"></i> Google Scholar
+</a>
+
+|
+
+<a href="https://www.linkedin.com/in/ao-he" target="_blank">
+<i class="fa-brands fa-linkedin"></i> LinkedIn
+</a>
+
+|
+
+<a href="https://github.com/" target="_blank">
+<i class="fa-brands fa-github"></i> GitHub
+</a>
+
+</div>
+
+<h2>Projects</h2>
+
+<div class="grid">
+
+<div class="item">
+<b>CycleSense</b>
+<p>
+Scene-aware cyclist behavior inference system based on fixed urban cameras. 
+This project aims to understand cyclist movement patterns using lightweight computer vision and spatial reasoning.
+</p>
+</div>
+
+<div class="item">
+<b>Future Project</b>
+<p>
+More research projects will be added here.
+</p>
+</div>
+
+</div>
+
+<h2>CV</h2>
+
+<p>
+You can download my CV here:
+<a href="./cv.pdf">Download CV</a>
+</p>
+
+<footer>
+© <span id="year"></span> Ao He
+</footer>
+
+</div>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear()
+</script>
+
 </body>
+
 </html>
